@@ -6,10 +6,10 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "qhu ai climate"
-description              : "Focus on cross-disciplinary research between artificial intelligence and climate change "
-repository               : "qhu-ai-climate/qhu-ai-climate..github.io"
-google_scholar_stats_use_cdn : true
+title : "qhu ai climate"
+description: "专注于人工智能在气候科学中的应用研究，由吴利导师带领"  # 组简介
+repository: "qhu-ai-climate/qhu-ai-climate.github.io"  # 你的仓库地址
+google_scholar_stats_use_cdn: true
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -20,15 +20,18 @@ bing_site_verification   :  # get bing_site_verification from https://www.bing.c
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
 # Site Author
+# 导师吴利的信息（作为组核心）
 author:
-  name             : "QHU-AI-Climate"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Qinghai University"
-  location         : "Xining Qinghai"
-  employer         : "Qinghai University"
-  pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=Cf1UPf0AAAAJ&hl=zh-CN"
-  email            : "wuli777@qhu.edu.cn"
+  name: "AI气候研究组"
+  avatar: "images/group-logo.png"  # 替换为组logo或团队照片
+  bio: "青海大学AI气候研究组致力于将人工智能技术与气候模拟、预测相结合，探索气候变化的规律与影响。"
+  location: "青海西宁"
+  employer: "青海大学"
+  # 导师吴利的学术链接
+  googlescholar: "https://scholar.google.com/citations?user=Cf1UPf0AAAAJ&hl=zh-CN"  # 吴利教授的谷歌学术
+  email: "wuli777@qhu.edu.cn"  # 导师邮箱（或组公共邮箱）
+  # 可添加组官网、GitHub组织链接等
+  github: "qhu-ai-climate"  # 组的GitHub组织地址
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

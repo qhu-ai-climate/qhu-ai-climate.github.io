@@ -19,8 +19,6 @@ redirect_from:
 
 Wu Li, Lecturer at Qinghai University, holds a Master's degree from the School of Computer Science and Technology, Tsinghua University. He mainly engages in interdisciplinary research on high-performance computing, climate system models, and machine learning. He has presided over 2 National Natural Science Foundation of China (NSFC) projects and 3 provincial/municipal-level projects, published 6 SCI papers in journals such as Geoscientific Model Development and Atmosphere, and was awarded the "Longxin Cup" Excellent Instructor for National College Students' Computer System Capability Training (2021-2022). His research results have been applied to precipitation forecasting in the Three-River-Source Region, serving ecological protection and disaster prevention and mitigation.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
 
 # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 

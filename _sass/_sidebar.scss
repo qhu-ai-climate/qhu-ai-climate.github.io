@@ -81,22 +81,26 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: auto; /* 取消固定宽度，适应长方形图片 */
-  height: auto;
+  width: auto;  /* 容器宽度自适应图片 */
+  height: auto; /* 容器高度自适应图片 */
 
   @include breakpoint($large) {
     display: block;
-    margin: 0 auto 1.5em; /* 居中显示 */
+    margin: 0 auto 1.5em; /* 大屏幕居中显示 */
   }
 
   img {
-    max-width: 175px;
-  min-width: 75px;
-  border-radius: 8px; /* 较小的圆角，适合长方形图片 */
+    max-width: 175px;    /* 限制最大宽度 */
+    width: 100%;         /* 宽度自适应容器 */
+    height: auto;        /* 高度随宽度自动调整，保持原始比例 */
+    min-width: 75px;     /* 限制最小宽度 */
+    border-radius: 8px;  /* 小圆角，不影响长方形显示 */
+    object-fit: contain; /* 确保图片完整显示，不被裁剪 */
 
-  @include breakpoint($large) {
-    padding: 5px;
-    border: 1px solid $border-color;
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
   }
 }
 

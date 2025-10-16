@@ -491,6 +491,13 @@ input[type="radio"] {
   z-index: 100;
 }
 
+// 在 _base.scss 或自定义样式中添加，针对性修复该图片
+// 假设图片有特定类名（如 .qinghai-university-img），若无则用父容器定位
+.author__avatar img[src*="青海大学.png"] {
+  border-radius: 0 !important; // 强制取消圆角，优先于其他样式
+  width: auto !important;      // 避免被全局样式强制固定宽度
+}
+
 .skip-link:focus {
   top: 0;
 }

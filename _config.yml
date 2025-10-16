@@ -7,8 +7,8 @@
 
 # Site Settings
 title                    : "qhu ai climate"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
+description              : "Focus on cross-disciplinary research between artificial intelligence and climate change "
+repository               : "qhu-ai-climate/qhu-ai-climate..github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -25,7 +25,7 @@ author:
   avatar           : "images/android-chrome-512x512.png"
   bio              : "Qinghai University"
   location         : "Xining Qinghai"
-  employer         :
+  employer         : "Qinghai University"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=Cf1UPf0AAAAJ&hl=zh-CN"
   email            : "wuli777@qhu.edu.cn"

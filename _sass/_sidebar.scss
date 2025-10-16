@@ -79,21 +79,30 @@
 }
 
 // 找到 .author__avatar 相关样式（通常在 _sidebar.scss 中）
+// 在 _sass/_sidebar.scss 中修改
 .author__avatar {
-  // 确保容器不限制固定宽高，避免压缩图片
-  width: auto;
-  height: auto;
-  display: inline-block; // 避免表格布局导致的尺寸异常
+  display: table-cell;
+  vertical-align: top;
+  width: auto; // 取消固定宽度，适应图片原始尺寸
+  // 移除 width: 75px 的固定值
 
-  img {
-    // 关键：取消圆形裁剪（50%会强制椭圆），设置小圆角或0
-    border-radius: 0; // 较小圆角，保持样式且不扭曲长方形图片
-    // 或完全取消圆角：border-radius: 0;
+  @include breakpoint($large) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
 
-    // 确保图片按原始比例显示，不强制拉伸
-    max-width: 100%; // 适应容器宽度
-    height: auto;    // 按宽度自动计算高度，保持比例
-    object-fit: contain; // 防止图片被裁剪（如需完整显示）
+  // 在 _sass/_sidebar.scss 中修改
+.author__avatar img {
+  max-width: 175px;
+  min-width: 75px;
+  border-radius: 0; // 取消圆角，完整显示长方形图片
+  // 或保留小圆角：border-radius: 4px;
+
+  @include breakpoint($large) {
+    padding: 5px;
+    border: 1px solid $border-color;
   }
 }
 
@@ -271,4 +280,10 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   padding: 1.5em; /* 增加内边距 */
+}
+
+// 在 _sass/_sidebar.scss 中补充
+.sidebar img {
+  width: 100%;
+  height: auto; // 按宽度自动计算高度，保持原始比例
 }

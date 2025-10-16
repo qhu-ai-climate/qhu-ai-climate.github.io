@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "QHU-AI-Climate"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -15,42 +15,108 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class='anchor' id='about-us'></span>
 
-Wu Li, Lecturer at Qinghai University, holds a Master's degree from the School of Computer Science and Technology, Tsinghua University. He mainly engages in interdisciplinary research on high-performance computing, climate system models, and machine learning. He has presided over 2 National Natural Science Foundation of China (NSFC) projects and 3 provincial/municipal-level projects, published 6 SCI papers in journals such as Geoscientific Model Development and Atmosphere, and was awarded the "Longxin Cup" Excellent Instructor for National College Students' Computer System Capability Training (2021-2022). His research results have been applied to precipitation forecasting in the Three-River-Source Region, serving ecological protection and disaster prevention and mitigation.
+## 关于我们
+青海大学AI-Climate研究组成立于XX年，由吴利导师领衔，专注于人工智能在气候模拟、极端天气预测、气候变化影响评估等领域的研究。团队依托青海大学的学科优势，结合高原气候特色，开展跨学科研究，旨在为应对气候变化提供科学支撑。
 
 
-# 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<span class='anchor' id='research-areas'></span>
 
-# 📝 Publications 
+## 研究方向
+1. 基于深度学习的气候模式降尺度模拟
+2. 极端天气事件（如暴雨、干旱）的AI预测模型
+3. 气候变化对生态系统的影响评估
+4. 多源气候数据融合与分析
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+<span class='anchor' id='team-members'></span>
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+## 团队成员
+### 导师
+**吴利 讲师*  
+- 清华大学工科硕士，青海大学讲师，研究生导师  
+- 研究方向：高性能计算、气候系统模式、机器学习  
+- 邮箱：wuli777@qhu.edu.cn  
+- [谷歌学术]({{ [site.author.googlescholar ](https://scholar.google.com/citations?user=Cf1UPf0AAAAJ&hl=zh-CN%20)}})
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+### 硕士生
+- ：研究方向XXX  
+- ：研究方向XXX
+- ：研究方向XXX
+- ：研究方向XXX
+- ：研究方向XXX   
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<span class='anchor' id='publications'></span>
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+## 代表性成果
+### 期刊论文
+swSpTRSV: A fast sparse triangular solve with sparse level tile layout on sunway architectures
+X Wang, W Liu, W Xue, L Wu
+Proceedings of the 23rd ACM SIGPLAN Symposium on Principles and Practice of …
+72	2018
+Enhanced Yolov8 network with Extended Kalman Filter for wildlife detection and tracking in complex environments
+L Jiang, L Wu
+Ecological Informatics 84, 102856
+25	2024
+Short-term rainfall prediction based on radar echo using an improved self-attention PredRNN deep learning model
+D Wu, L Wu, T Zhang, W Zhang, J Huang, X Wang
+Atmosphere 13 (12), 1963
+25	2022
+Physics-informed deep learning for reconstruction of spatial missing climate information in the Antarctic
+Z Yao, T Zhang, L Wu, X Wang, J Huang
+Atmosphere 14 (4), 658
+9	2023
+PAS: A new powerful and simple quantum computing simulator
+H Bian, J Huang, J Tang, R Dong, L Wu, X Wang
+Software: Practice and Experience 53 (1), 142-159
+8	2023
+An effective parameter optimization with radiation balance constraint in CAM5 (version 5.3)
+L Wu, T Zhang, Y Qin, W Xue
+Geoscientific Model Development 13 (1), 41-53
+7	2020
+CPAT: cross-patch aggregated transformer for time series forecasting
+B Liu, L Wu, X Wang, J Huang, G Zhang
+Machine Learning 114 (5), 131
+3	2025
+STA-Net: Reconstruct Missing Temperature Data of Meteorological Stations Using a Spatiotemporal Attention Neural Network
+T Hou, L Wu, X Zhang, X Wang, J Huang
+International Conference on Neural Information Processing, 29-52
+3	2023
+STFM: Accurate Spatio-Temporal Fusion Model for Weather Forecasting
+J Liu, L Wu, T Zhang, J Huang, X Wang, F Tian
+Atmosphere 15 (10), 1176
+1	2024
+DisRot: boosting the generalization capability of few-shot learning via knowledge distillation and self-supervised learning
+C Ma, J Jia, J Huang, L Wu, X Wang
+Machine Vision and Applications 35 (3), 51
+1	2024
+DFMM-Precip: Deep Fusion of Multi-Modal Data for Accurate Precipitation Forecasting.
+J Li, L Wu, J Liu, X Wang, W Xue
+Water (20734441) 16 (24)
+2024
+DAT-Net: Filling of missing temperature values of meteorological stations by data augmentation attention neural network
+X Guo, T Hou, L Wu
+Journal of Physics: Conference Series 2816 (1), 012004
+2024
+ARFA: An Asymmetric Receptive Field Autoencoder Model for Spatiotemporal Prediction
+W Zhang, X Zou, L Wu, X Wang, J Huang, J Xing
+ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and …
+2024
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<span class='anchor' id='projects'></span>
+
+## 科研项目
+基于深度学习的多源数据降水预报方法及在三江源地区的应用	国家自然科学基金	国家级	33	2023-2026	否
+融合人工智能技术和数值模式的三江源区中短期降水预测方法研究	国家自然科学基金	国家级	36	2022-2025	否
+基于气象数据驱动的青海黄黄河流域短时期空降水预测方法研究	青海省自然科学基金	省部级	40	2023-2025	否
+地球系统模式公共软件平台在青藏高原气候诊断评估的应用与推广	青海省重点研发与转化计划	省部级		2023-2025	否
+三江源区数值天气预报模式移植优化及应用研究	青海省自然科学基金	省部级		2022-2024	否
+
+<span class='anchor' id='news'></span>
+
+## 新闻动态
+- 2023.10：
+- 2023.09：

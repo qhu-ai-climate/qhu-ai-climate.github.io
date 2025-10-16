@@ -81,22 +81,29 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: auto;  /* 容器宽度自适应图片 */
-  height: auto; /* 容器高度自适应图片 */
+  width: auto; /* 容器宽度完全适应图片 */
+  height: auto; /* 容器高度完全适应图片，不强制压缩 */
+  padding: 0; /* 清除默认内边距，避免挤压图片 */
+  margin: 0; /* 清除默认外边距 */
 
+  /* 大屏幕断点样式，保持居中但不限制宽高 */
   @include breakpoint($large) {
     display: block;
-    margin: 0 auto 1.5em; /* 大屏幕居中显示 */
+    margin: 0 auto 1.5em;
+    width: auto; /* 重新声明，防止断点样式覆盖 */
   }
 
   img {
-    max-width: 175px;    /* 限制最大宽度 */
-    width: 100%;         /* 宽度自适应容器 */
-    height: auto;        /* 高度随宽度自动调整，保持原始比例 */
-    min-width: 75px;     /* 限制最小宽度 */
-    border-radius: 8px;  /* 小圆角，不影响长方形显示 */
-    object-fit: contain; /* 确保图片完整显示，不被裁剪 */
+    max-width: 175px; /* 限制最大宽度，避免过大 */
+    min-width: 75px; /* 限制最小宽度，避免过小 */
+    width: 100%; /* 图片宽度自适应容器 */
+    height: auto !important; /* 强制高度随宽度等比缩放，优先级最高，防止被覆盖 */
+    border-radius: 8px; /* 小圆角，不改变长方形形态 */
+    object-fit: contain; /* 确保图片完整显示，不裁剪任何部分 */
+    object-position: center; /* 图片在容器内居中，避免偏移 */
+    border: none; /* 清除默认边框，防止视觉变形 */
 
+    /* 大屏幕断点图片样式 */
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;

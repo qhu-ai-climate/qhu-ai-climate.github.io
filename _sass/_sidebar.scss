@@ -90,14 +90,13 @@
   }
 
   img {
-    max-width: 200px; /* 限制最大宽度 */
-    width: 100%; /* 响应式缩放 */
-    height: auto; /* 保持宽高比 */
-    border-radius: 6px; /* 小圆角替代圆形 */
-    padding: 3px;
-    border: 1px solid $border-color; /* 细边框 */
-    object-fit: cover; /* 确保图片内容完整 */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* 轻微阴影 */
+    max-width: 175px;
+  min-width: 75px;
+  border-radius: 8px; /* 较小的圆角，适合长方形图片 */
+
+  @include breakpoint($large) {
+    padding: 5px;
+    border: 1px solid $border-color;
   }
 }
 

@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # 导师吴利的信息（作为组核心）
 author:
   name: "QHU-AI-Climate"
-  avatar: "images/group-logo.png"  # 替换为组logo或团队照片
+  avatar: "images/青海大学.png"  # 替换为组logo或团队照片
   bio: "青海大学AI气候研究组致力于将人工智能技术与气候模拟、预测相结合，探索气候变化的规律与影响。"
   location: "青海西宁"
   employer: "青海大学"

@@ -6,13 +6,29 @@ html {
   color: $text-color;
   font-size: 100%;
   line-height: 1.5;
-  @include box-sizing(border-box);
+  html {
+  color: $text-color;
+  font-size: 100%;
+  line-height: 1.5;
+  // 替换为以下三行
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 }
 
 *,
 *:before,
 *:after {
-  @include box-sizing(inherit);
+  html {
+  color: $text-color;
+  font-size: 100%;
+  line-height: 1.5;
+  // 替换为以下三行
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 }
 
 body {

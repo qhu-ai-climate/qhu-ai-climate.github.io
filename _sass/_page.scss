@@ -225,22 +225,23 @@
 .related-posts__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em; // 间距
+  gap: 1em;
+  margin: 1.5em 0 0;
   padding: 0;
   list-style: none;
 }
 
 .related-posts__item {
-  flex: 1 0 45%; // 默认每行 2 列（约 45% 宽度，留间隙）
+  flex: 1 0 45%; /* 默认每行2列 */
   margin-bottom: 1.5em;
   padding-right: 1em;
 
-  @media (min-width: $small) {
-    flex: 1 0 30%; // 小屏幕每行 3 列
+  @include breakpoint($small) {
+    flex: 1 0 30%; /* 小屏幕每行3列 */
   }
 
-  @media (min-width: $large) {
-    flex: 1 0 22%; // 大屏幕每行 4 列
+  @include breakpoint($large) {
+    flex: 1 0 22%; /* 大屏幕每行4列 */
   }
 }
 
@@ -305,7 +306,7 @@
 }
 
 .pagination__links {
-  @include span-columns(12);
+  width: 100%; /* 替代 span-columns(12) */
 }
 
 .pagination__prev,

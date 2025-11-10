@@ -223,22 +223,25 @@
 }
 
 .related-posts__list {
-  @include clearfix;
-  margin: 1.5em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em; // 间距
   padding: 0;
   list-style: none;
 }
 
 .related-posts__item {
-  @include span-columns(1 of 2);
-  @include breakpoint($small) {
-    @include span-columns(1 of 3);
-  }
-  @include breakpoint($large) {
-    @include span-columns(1 of 4);
-  }
+  flex: 1 0 45%; // 默认每行 2 列（约 45% 宽度，留间隙）
   margin-bottom: 1.5em;
   padding-right: 1em;
+
+  @media (min-width: $small) {
+    flex: 1 0 30%; // 小屏幕每行 3 列
+  }
+
+  @media (min-width: $large) {
+    flex: 1 0 22%; // 大屏幕每行 4 列
+  }
 }
 
 .related-posts__item a {

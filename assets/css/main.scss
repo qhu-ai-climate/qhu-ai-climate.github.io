@@ -12,10 +12,13 @@
 
 
 // 仅保留必要变量，删除所有第三方依赖导入
-@import "variables"; // 确保 variables.scss 中已用原生变量替代 breakpoint-set
+@import "vendor/breakpoint/breakpoint";
+@import "variables";
+@import "mixins";  // 先导入 mixins（包含 border-box-sizing 定义）
+@import "vendor/susy/susy";
 
-// 仅导入无混合宏依赖的基础样式
-@import "reset";
+@import "reset";  // 后导入 reset（使用该 mixin）
+// ... 其他导入
 @import "base";
 
 // 移除所有可能含混合宏的组件导入

@@ -10,23 +10,36 @@
  *
 */
 
-
-// 仅保留必要变量，删除所有第三方依赖导入
-@import "vendor/breakpoint/breakpoint";
+@import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
-@import "mixins";  // 先导入 mixins（包含 border-box-sizing 定义）
+@import "mixins";
 @import "vendor/susy/susy";
 
-@import "reset";  // 后导入 reset（使用该 mixin）
-// ... 其他导入
+@import "reset";
 @import "base";
 
-// 移除所有可能含混合宏的组件导入
-// @import "utilities";
-// @import "animations";
-// ...（其他组件导入全部注释）
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
 
-// 你的自定义样式（纯原生CSS，无@include）
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
 .paper-box {
     display: flex;
     justify-content: left;
@@ -54,8 +67,7 @@
         order: 1;
     }
     
-    /* 原生媒体查询，直接用变量值 */
-    @media (min-width: $medium) { /* 假设 variables.scss 中已定义 $medium: 768px */
+    @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
             min-width: 200px;
@@ -69,7 +81,10 @@
             max-width: 60%;
             order: 2;
         }
+
     }
+
+
 }
 
 $scroll_offset : 2em;

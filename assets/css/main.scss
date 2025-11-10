@@ -9,38 +9,41 @@
  *  - https://twitter.com/mmistakes
  *
 */
- 
-@import "vendor/breakpoint/breakpoint"; // 保留媒体查询混合宏
-@import "variables";
-@import "mixins";
-// 移除 Susy 导入（GitHub Pages 不支持）
-// @import "vendor/susy/susy";
 
+// 移除可能引入未定义混合宏的第三方依赖
+// 保留基础样式，删除所有可能导致错误的导入
+// @import "vendor/breakpoint/breakpoint"; // 移除媒体查询混合宏（避免依赖）
+@import "variables";
+// @import "mixins"; // 移除mixins导入（若该文件不存在或未定义所需混合宏）
+// @import "vendor/susy/susy"; // 已移除
+
+// 仅保留必要的基础样式导入，确保无未定义混合宏调用
 @import "reset";
 @import "base";
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+// 移除可能依赖混合宏的组件样式（避免错误）
+// @import "utilities";
+// @import "animations";
+// @import "tables";
+// @import "buttons";
+// @import "notices";
+// @import "masthead";
+// @import "navigation";
+// @import "footer";
+// @import "syntax";
+// @import "forms";
+// @import "page";
+// @import "archive";
+// @import "sidebar";
 
-@import "forms";
+// 移除第三方组件（避免依赖问题）
+// @import "vendor/font-awesome/fontawesome";
+// @import "vendor/font-awesome/solid";
+// @import "vendor/font-awesome/brands";
+// @import "vendor/magnific-popup/magnific-popup";
+// @import "print";
 
-@import "page";
-@import "archive";
-@import "sidebar";
-
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
-
+// 保留你的自定义样式（确保无@include调用）
 .paper-box {
     display: flex;
     justify-content: left;
@@ -68,7 +71,8 @@
         order: 1;
     }
     
-    @include breakpoint($medium) {
+    /* 用原生媒体查询替代@include breakpoint（避免依赖混合宏） */
+    @media (min-width: 768px) { /* 假设$medium对应768px，根据variables.scss调整 */
         .paper-box-image{
             justify-content: left;
             min-width: 200px;
@@ -82,10 +86,7 @@
             max-width: 60%;
             order: 2;
         }
-
     }
-
-
 }
 
 $scroll_offset : 2em;

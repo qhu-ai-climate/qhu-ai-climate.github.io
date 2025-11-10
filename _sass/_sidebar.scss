@@ -78,46 +78,44 @@
   align-items: center;
 }
 
-// 找到 .author__avatar 相关样式（通常在 _sidebar.scss 中）
-// 在 _sass/_sidebar.scss 中修改
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: auto; // 取消固定宽度，适应图片原始尺寸
-  // 移除 width: 75px 的固定值
+  width: 75px;
+  // set width only, for non-square avatars
+  // height: 36px;
 
   @include breakpoint($large) {
     display: block;
     width: auto;
     height: auto;
   }
-}
 
-  // 在 _sass/_sidebar.scss 中修改
-.author__avatar img {
-  max-width: 175px;
-  min-width: 75px;
-  border-radius: 0; // 取消圆角，完整显示长方形图片
-  // 或保留小圆角：border-radius: 4px;
+  img {
+    max-width: 175px;
+    min-width: 75px;
+    border-radius: 50%;
 
-  @include breakpoint($large) {
-    padding: 5px;
-    border: 1px solid $border-color;
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
   }
 }
 
 .author__content {
   display: table-cell;
   vertical-align: top;
-  padding-left: 15px; /* 增加图片与文本间距 */
+  padding-left: 10px;
   min-width: 120px;
-  line-height: 1.6; /* 优化行高 */
+  // padding-right: 25px;
+  line-height: 1;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
-    padding-left: 0; /* 大屏幕取消左内边距 */
-    text-align: center; /* 文本居中 */
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -199,8 +197,6 @@
     border: 0;
     background: transparent;
     box-shadow: none;
-    text-align: center; /* 社交链接居中 */
-    padding-top: 1em; /* 增加与上方内容间距 */
   }
 
   &:before {
@@ -250,7 +246,6 @@
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
-    justify-content: center; /* 图标与文字居中对齐 */
 
     &:hover {
       text-decoration: underline;
@@ -272,18 +267,4 @@
   @include breakpoint($large) {
     display: none;
   }
-}
-
-/* 侧边栏容器样式优化 */
-.sidebar .sticky {
-  background-color: white;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  padding: 1.5em; /* 增加内边距 */
-}
-
-// 在 _sass/_sidebar.scss 中补充
-.sidebar img {
-  width: 100%;
-  height: auto; // 按宽度自动计算高度，保持原始比例
 }

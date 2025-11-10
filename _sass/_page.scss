@@ -223,26 +223,22 @@
 }
 
 .related-posts__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+  @include clearfix;
   margin: 1.5em 0 0;
   padding: 0;
   list-style: none;
 }
 
 .related-posts__item {
-  flex: 1 0 45%; /* 默认每行2列 */
+  @include span-columns(1 of 2);
+  @include breakpoint($small) {
+    @include span-columns(1 of 3);
+  }
+  @include breakpoint($large) {
+    @include span-columns(1 of 4);
+  }
   margin-bottom: 1.5em;
   padding-right: 1em;
-
-  @include breakpoint($small) {
-    flex: 1 0 30%; /* 小屏幕每行3列 */
-  }
-
-  @include breakpoint($large) {
-    flex: 1 0 22%; /* 大屏幕每行4列 */
-  }
 }
 
 .related-posts__item a {
@@ -306,7 +302,7 @@
 }
 
 .pagination__links {
-  width: 100%; /* 替代 span-columns(12) */
+  @include span-columns(12);
 }
 
 .pagination__prev,

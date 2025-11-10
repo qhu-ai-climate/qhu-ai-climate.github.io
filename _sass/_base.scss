@@ -1,34 +1,10 @@
 /* ==========================================================================
-   Base styles: opinionated defaults
+   BASE ELEMENTS
    ========================================================================== */
-
 html {
-  color: $text-color;
-  font-size: 100%;
-  line-height: 1.5;
-  html {
-  color: $text-color;
-  font-size: 100%;
-  line-height: 1.5;
-  // 替换为以下三行
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-}
-
-*,
-*:before,
-*:after {
-  html {
-  color: $text-color;
-  font-size: 100%;
-  line-height: 1.5;
-  // 替换为以下三行
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+  /* sticky footer fix */
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -37,483 +13,310 @@ body {
   padding-bottom: 0em;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.7; /* 行高增大，提升中文可读性 */
-  background-color: $background-color; /* 应用背景色 */
+  line-height: 1.5;
 
   &.overflow--hidden {
+    /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
   }
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: $primary-color;
-  color: #fff;
-  text-shadow: none;
-}
-
-::selection {
-  background: $primary-color;
-  color: #fff;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid $border-color;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/*
- * Browser upgrade prompt
- */
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: $light-gray;
-  color: $text-color;
-  padding: 0.2em 0;
-}
-
-/*
- * Print styles.
- *
- * Inlined to avoid the additional HTTP request:
- * http://www.phpied.com/delay-loading-your-print-css/
- */
-
-@media print {
-  *,
-  *:before,
-  *:after,
-  *:first-letter,
-  p:first-line,
-  div:first-line,
-  blockquote:first-line,
-  li:first-line {
-    background: transparent !important;
-    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
-/*
-   Typography
-   ========================================================================== */
-
 h1, h2, h3, h4, h5, h6 {
-  margin: 1.5em 0 0.8em; /* 标题上下间距增大，增强段落区分 */
-  line-height: 1.3;
+  margin: 1em 0 0.5em;
+  line-height: 1.2;
   font-family: $header-font-family;
-  font-weight: 600; /* 标题字重稍减，避免过于厚重 */
-  color: $primary-color; /* 标题统一使用主色调 */
+  font-weight: bold;
+}
+
+h1 {
+  // margin: 4em 0 0.5em;
+  margin-top: 1em;
+  font-size: $type-size-3;
+}
+
+h2 {
+  font-size: $type-size-4;
+}
+
+h3 {
+  font-size: $type-size-5;
+}
+
+h4 {
+  font-size: $type-size-6;
+}
+
+h5 {
+  font-size: $type-size-6;
+}
+
+h6 {
+  font-size: $type-size-6;
+}
+
+small, .small {
+  font-size: $type-size-6;
 }
 
 p {
-  margin-bottom: 1em; /* 段落底部间距增大 */
-  max-width: 800px; /* 限制段落最大宽度，避免过长行影响阅读 */
+  margin-bottom: 0.5em;
 }
 
-a {
-  color: $secondary-color;
+u,
+ins {
   text-decoration: none;
-  transition: color 0.3s ease; /* 链接颜色过渡动画 */
-
-  &:hover {
-    color: $primary-color; /*  hover时加深颜色 */
-    text-decoration: underline;
+  border-bottom: 1px solid $text-color;
+  a {
+    color: inherit;
   }
 }
 
-address {
-  margin: 0 0 1.5em;
-}
-
-ol,
 ul {
-  margin: 0 0 1.5em 3em;
-  padding: 0;
+  padding-inline-start: 2em;
+  margin-block-start: 0.5em;
 }
 
-ol {
-  list-style-type: decimal;
+del a {
+  color: inherit;
 }
 
-ul {
-  list-style-type: disc;
+/* reduce orphans and widows when printing */
+
+p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
+  orphans: 3;
+  widows: 3;
 }
 
-li > ol,
-li > ul {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+/* abbreviations */
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 1px dotted $text-color;
 }
 
-dl {
-  margin: 0 0 1.5em;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin: 0 0 1.5em;
-}
+/* blockquotes */
 
 blockquote {
-  margin: 0 1.5em;
-  padding: 1em;
-  background: $light-gray;
-  border-left: 3px solid $primary-color;
-  border-radius: 0 $border-radius $border-radius 0;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-strong,
-b {
-  font-weight: bold;
-}
-
-em,
-i {
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
   font-style: italic;
+  border-left: 0.25em solid $primary-color;
+
+  cite {
+    font-style: italic;
+
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
 }
 
-.muted {
-  color: $gray;
+/* links */
+
+a {
+  
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
-/*
-   Figures
-   ========================================================================== */
+/* code */
 
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-figcaption {
-  display: block;
-  margin-top: 0.8em;
-  font-size: $type-size-6;
-  font-family: $caption-font-family;
-  color: $gray;
-}
-
-/*
-   Code
-   ========================================================================== */
-
-pre,
-code,
-kbd,
-samp {
+tt, code, kbd, samp, pre {
   font-family: $monospace;
-  font-size: 1em;
 }
 
 pre {
-  margin: 0 0 1.5em;
-  padding: 1em;
-  max-width: 100%;
-  overflow: auto;
+  overflow-x: auto; /* add scrollbars to wide code blocks*/
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   font-size: $type-size-6;
-  background-color: $code-background-color;
+  background: $code-background-color;
+  border: 1px solid $lighter-gray;
   border-radius: $border-radius;
-}
+  box-shadow: $box-shadow;
 
-code {
-  padding: 0.2em 0.3em;
-  background-color: $code-background-color;
-  border-radius: 3px;
-  white-space: nowrap;
-}
-
-pre code {
-  padding: 0;
-  background-color: transparent;
-  white-space: inherit;
-}
-
-kbd {
-  padding: 0.1em 0.4em;
-  background-color: $code-background-color-dark;
-  border-radius: 3px;
-}
-
-/*
-   Tables
-   ========================================================================== */
-
-table {
-  margin: 0 0 1.5em;
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th,
-td {
-  padding: 0.8em;
-  text-align: left;
-  border-bottom: 1px solid $border-color;
-}
-
-th {
-  font-weight: bold;
-  background-color: $light-gray;
-}
-
-/*
-   Forms
-   ========================================================================== */
-
-form {
-  margin: 0 0 1.5em;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-}
-
-input,
-select,
-textarea {
-  display: block;
-  margin-bottom: 1em;
-  padding: 0.6em;
-  width: 100%;
-  font-family: $global-font-family;
-  font-size: $type-size-6;
-  color: $text-color;
-  background-color: $body-color;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-
-  &:focus {
-    outline: none;
-    border-color: $primary-color;
-    box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+  &:before, &:after {
+    letter-spacing: -0.2em;
+    content: "\00a0"; /* non-breaking space*/
   }
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: 0.6em 1.2em;
-  font-family: $global-font-family;
-  font-size: $type-size-6;
-  font-weight: bold;
-  color: $body-color;
-  background-color: $primary-color;
-  border: none;
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: $global-transition;
+/* horizontal rule */
 
-  &:hover,
-  &:focus {
-    background-color: $link-color-hover;
-    outline: none;
-  }
-
-  &:active {
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  }
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-  margin-right: 0.5em;
-  width: auto;
-}
-
-/*
-   Alignment
-   ========================================================================== */
-
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
-}
-
-.aligncenter {
-  clear: both;
+hr {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*
-   Screen Reader Text
-   ========================================================================== */
-
-.screen-reader-text {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
+  margin: 1em 0;
   border: 0;
+  border-top: 1px solid $border-color;
 }
 
-.screen-reader-text:focus {
-  position: static;
-  overflow: visible;
-  clip: auto;
-  width: auto;
-  height: auto;
-  margin: 0;
-  text-decoration: underline;
+/* lists */
+
+ul li,
+ol li {
+  margin-bottom: 0.5em;
+}
+
+li ul,
+li ol {
+  margin-top: 0.5em;
 }
 
 /*
-   Accessibility
+   Media and embeds
    ========================================================================== */
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 8px;
-  background: $primary-color;
-  color: $body-color;
-  z-index: 100;
+/* Figures and images */
+
+figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
+
+  img,
+  iframe,
+  .fluid-width-video-wrapper {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+  }
+
+  > a {
+    display: block;
+  }
+
+  &.half {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(50% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
+
+  &.third {
+    > a,
+    > img {
+      @include breakpoint($small) {
+        width: calc(33.3333% - 0.5em);
+      }
+    }
+
+    figcaption {
+      width: 100%;
+    }
+  }
 }
 
-// 在 _base.scss 或自定义样式中添加，针对性修复该图片
-// 假设图片有特定类名（如 .qinghai-university-img），若无则用父容器定位
-.author__avatar img[src*="青海大学.png"] {
-  border-radius: 0 !important; // 强制取消圆角，优先于其他样式
-  width: auto !important;      // 避免被全局样式强制固定宽度
+/* Figure captions */
+
+figcaption {
+  margin-bottom: 0.5em;
+  color: mix(#fff, $text-color, 25%);
+  font-family: $caption-font-family;
+  font-size: $type-size-6;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid $light-gray;
+    -webkit-transition: $global-transition;
+    transition: $global-transition;
+
+    &:hover {
+      color: #000;
+      border-bottom-color: #000;
+    }
+  }
 }
 
-.skip-link:focus {
-  top: 0;
+
+/* Fix IE9 SVG bug */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+/*
+   Navigation lists
+   ========================================================================== */
+
+/**
+ * Removes margins, padding, and bullet points from navigation lists
+ *
+ * Example usage:
+ * <nav>
+ *    <ul>
+ *      <li><a href="#link-1">Link 1</a></li>
+ *      <li><a href="#link-2">Link 2</a></li>
+ *      <li><a href="#link-3">Link 3</a></li>
+ *    </ul>
+ *  </nav>
+ */
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* override white-space for nested lists */
+  ul li,
+  ol li {
+    margin-bottom: 0;
+  }
+
+  li ul,
+  li ol {
+    margin-top: 0;
+  }
+}
+
+/*
+   Global animation transition
+   ========================================================================== */
+
+b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
 }

@@ -6,12 +6,12 @@
   margin-bottom: 2em;
 
   @include breakpoint($medium) {
-    width: 100%; /* 替代 span(12 of 12) */
+    @include span(12 of 12);
   }
 
   @include breakpoint($large) {
-    width: calc(100% - 8.333%); /* 替代 span(10 of 12 last) */
-    margin-left: 4.166%; /* 替代 prefix(0.5 of 12) */
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
   }
 
   a {
@@ -129,16 +129,16 @@
   }
 
   @include breakpoint($small) {
-    flex: 0 0 50%; /* 替代 gallery(5 of 10) */
+    @include gallery(5 of 10);
     .archive__item-teaser {
       max-height: 200px;
     }
   }
 
   @include breakpoint($medium) {
-    margin-left: 0;
-    margin-right: 0;
-    flex: 0 0 25%; /* 替代 gallery(2.5 of 10) */
+    margin-left: 0; /* reset before mixin does its thing*/
+    margin-right: 0; /* reset before mixin does its thing*/
+    @include gallery(2.5 of 10);
 
     .archive__item-teaser {
       max-height: 120px;
@@ -168,7 +168,7 @@
 
   @include breakpoint($small) {
     margin-bottom: 0;
-    flex: 0 0 33.333%; /* 替代 gallery(4 of 12) */
+    @include gallery(4 of 12);
 
     .feature__item-teaser {
       max-height: 200px;
@@ -177,7 +177,7 @@
   }
 
   &--left {
-    width: 100%; /* 替代 full() */
+    @include full();
     font-size: 1.25rem;
 
     .archive__item-teaser {
@@ -186,21 +186,19 @@
 
     @include breakpoint($small) {
       .archive__item-teaser {
-        float: left;
-        width: 41.666%; /* 替代 span(5 of 12) */
+        @include span(5 of 12);
       }
 
       .archive__item-body {
-        float: right;
-        width: 58.333%; /* 替代 span(7 of 12 last) */
-        margin-left: 4.166%; /* 替代 prefix(0.5 of 12) */
-        margin-right: 8.333%; /* 替代 suffix(1 of 12) */
+        @include span(7 of 12 last);
+        @include prefix(0.5 of 12);
+        @include suffix(1 of 12);
       }
     }
   }
 
   &--right {
-    width: 100%; /* 替代 full() */
+    @include full();
     font-size: 1.25rem;
 
     .archive__item-teaser {
@@ -211,21 +209,19 @@
       text-align: right;
 
       .archive__item-teaser {
-        float: right;
-        width: 41.666%; /* 替代 span(5 of 12 rtl) */
+        @include span(5 of 12 rtl);
       }
 
       .archive__item-body {
-        float: left;
-        width: 58.333%; /* 替代 span(7 of 12 last rtl) */
-        margin-left: 4.166%; /* 替代 prefix(0.5 of 12) */
-        margin-right: 8.333%; /* 替代 suffix(1 of 12) */
+        @include span(7 of 12 last rtl);
+        @include prefix(0.5 of 12);
+        @include suffix(1 of 12);
       }
     }
   }
 
   &--center {
-    width: 100%; /* 替代 full() */
+    @include full();
     font-size: 1.25rem;
 
     .archive__item-teaser {
@@ -237,12 +233,12 @@
 
       .archive__item-teaser {
         margin: 0 auto;
-        width: 41.666%; /* 替代 span(5 of 12) */
+        width: span(5 of 12);
       }
 
       .archive__item-body {
         margin: 0 auto;
-        width: 58.333%; /* 替代 span(7 of 12) */
+        width: span(7 of 12);
       }
     }
   }
